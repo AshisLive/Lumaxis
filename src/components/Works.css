@@ -1,0 +1,106 @@
+.works {
+  padding: 120px 80px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.works__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  gap: 24px;
+}
+.works__heading {
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.9;
+  flex: 1;
+}
+.works__heading span {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.35);
+  color: transparent;
+}
+.works__see-all {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-mid);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.works__see-all:hover { color: var(--white); }
+
+.works__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.works__card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--gray-card);
+  border: 1px solid var(--gray-border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.works__card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.works__card-img {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.works__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7) 100%);
+}
+.works__card-num {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.06em;
+}
+
+.works__card-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.works__card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.works__card-year {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: var(--gray-dim);
+  letter-spacing: 0.06em;
+}
+.works__card-title {
+  font-size: 32px;
+  color: var(--white);
+}
+.works__card-btn {
+  background: none;
+  color: var(--gray-mid);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s;
+}
+.works__card:hover .works__card-btn { color: var(--white); }
